@@ -1,0 +1,180 @@
+body{
+    min-height: 100%;
+    background-color: rgb(35, 126, 73);
+}
+
+header{
+    margin-top: 10px;
+}
+
+#div_menu{
+    margin-top: 8em;
+    display: grid;
+    justify-content:center;
+}
+
+#start{    
+    height: 100px;
+    width: 250px;
+    border-radius: 10px;
+
+    background-color: rgb(170, 69, 51);
+
+    font-weight: bold;
+    font-size: 25px;
+    font-family: 'Bebas Neue';
+
+}
+#start:hover{
+    box-shadow: inset 0 0 20px #1d1c1cdc;
+}
+#start:active{
+    background-color: rgb(136, 55, 41);
+}
+
+
+#add{
+    margin: 10px;
+    height: 70px;
+    width: 230px;
+    border-radius: 10px;
+
+    background-color: rgb(170, 69, 51);
+
+    font-weight: 550;
+    font-size: 20px;
+    font-family: 'Bebas Neue';
+}
+#add:hover{
+    box-shadow: inset 0 0 20px #1d1c1cdc;
+}
+#add:active{
+    background-color: rgb(136, 55, 41);
+}
+
+#agregar_palabra{
+    display: none;
+    justify-content: center;
+}
+
+#textarea{
+    margin-left: 10px;
+    height: 10em;
+    border: none;
+    background-color: rgb(35, 126, 73);
+    margin-bottom: 10px;
+    margin-top: 20px;
+    font-size: 30px;
+    resize: none;
+    color: black;
+}
+#textarea:focus{
+    border: none;
+    outline: 0;
+}
+#textarea::-webkit-input-placeholder {
+    color: black;
+}
+
+.botones_guardar_palabra{
+    display: flex;
+    justify-content: center;
+    margin-top: 3em;
+}
+#agregar_palabra button{
+    height: 70px;
+    width: 230px;
+    border-radius: 10px;
+    margin-left: 10px;
+
+    background-color: rgb(170, 69, 51);
+
+    font-weight: bold;
+    font-size: 25px;
+    font-family: 'Bebas Neue';
+}
+#agregar_palabra button:hover{box-shadow: inset 0 0 20px #1d1c1cdc;}
+#agregar_palabra button:active{background-color: rgb(136, 55, 41);}
+#agregar_palabra button:last-child{
+    margin-right: 7px;
+}
+
+#interfaz_juego{
+    display: none;
+    width: 100%;
+    height: 60%;
+}
+
+#imagen_ahorcado{
+    text-align: center;
+}
+
+#letras{
+    width: 100%;
+    height: 100%;
+    margin-top: 5px;
+}
+
+#letras_acertadas{
+    display: flex;
+    height: 70px;
+    justify-content: center;
+}
+
+#letras_acertadas h1{    
+    width: 3rem;
+    height: 4.5rem;
+
+    border-bottom: solid 2px black;
+    margin-right: 1rem;
+    line-height: 6.5rem;
+
+    font-size: 40px;
+    text-align: center;
+}
+#letras_acertadas h1:first-child{
+    margin-left: 1rem;
+}
+
+#letras_erradas{
+    margin-top: 10px;
+
+    color: rgb(41, 41, 25);
+    font-size: 40px;
+    text-align: center;
+}
+
+#cartel{
+    margin-top: 10px;
+
+    font-size: 40px;
+    color: rgb(199, 197, 66);
+    text-align: center;
+}
+
+#seccion_botones_interfaz{
+    display: flex;
+    justify-content: center;
+    margin-top: 3em;
+}
+
+#seccion_botones_interfaz button{
+    height: 70px;
+    width: 230px;
+    border-radius: 10px;
+    margin-left: 10px;
+
+    background-color: rgb(170, 69, 51);
+
+    font-weight: bold;
+    font-size: 25px;
+    font-family: 'Bebas Neue';
+}
+#seccion_botones_interfaz button:last-child{
+    margin-right: 5px;
+}
+#seccion_botones_interfaz button:hover{box-shadow: inset 0 0 20px #1d1c1cdc;}
+#seccion_botones_interfaz button:active{background-color: rgb(136, 55, 41);}
+#seccion_botones_interfaz button:last-child{
+    margin-right: 5px;
+}

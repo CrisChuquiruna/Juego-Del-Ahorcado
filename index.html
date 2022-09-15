@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@1,300&display=swap" rel="stylesheet">
+    <title>Juego del Ahorcado</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="imagenes/Logo.svg" alt="Logo Alura">
+    </header>
+    <main>
+        <section id="menu">
+            <div id="div_menu">
+                <button id="start">Iniciar Juego</button>
+                <button id="add">Agregar Palabra</button>
+            </div>
+        </section>
+        <section id="agregar_palabra">
+            <textarea placeholder="Ingrese la Palabra" name="" id="textarea" cols="30" rows="10"></textarea>
+            <div class="botones_guardar_palabra">
+                <button id="guardar">Guardar</button>
+                <button id="cancelar">Cancelar</button>
+            </div>
+        </section>
+        <section id="intefaz_juego">
+            <div id="imagen_ahorcado">
+                <img id="imagen" src="imagenes/Ahorcado_1.png" alt="Imagen de Ahorcado">
+            </div>
+            <div id="letras">
+                    <div id="letras_acertadas"></div>            
+                    <div id="letras_erradas"></div>
+                    <div id="cartel"></div>
+            </div>            
+            <div id="seccion_botones_interfaz">
+                <button id="nuevo_juego">Nuevo Juego</button>
+                <button id="rendirse">Rendirse</button>
+            </div>        
+        </section>
+    </main>    
+</body>
+
+<script src="script.js"></script>
+</html>
