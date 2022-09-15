@@ -66,16 +66,15 @@ function iniciar_juego(){
     menu.style.display = "none";    
     interfaz_juego.style.display = "block";
 }
-function verificar_letra(letra){
-    if (isNaN(letra)){
-        return palabra_aleatoria.includes(letra)
-    }
-}
+
 function rendirse(){
     interfaz_juego.style.display = "none";
     menu.style.display = "block"
 }
-
+function es_una_letra(caracter){
+    let ascii = caracter.toUpperCase().charCodeAt(0);
+	return (isNaN(caracter) && ascii > 64 && ascii < 91);
+}
 
 // Escuchar teclado
 function terminar_evento(){
@@ -98,32 +97,33 @@ function cuantas_letras_tiene(palabra){
 }
 function evento_teclado(event){
     var keyValue = (event.key.toUpperCase()); 
-
-    if (verificar_letra(keyValue) && !lista_letras_usadas.includes(keyValue)){
-        lista_letras_usadas.push(keyValue);        
-        contador_ganar ++;
-        console.log("Puntos para ganar: "+ cuantas_letras_tiene(palabra_aleatoria)+ " Puntos actuales: " + contador_ganar);
-        for (i = 0; i<palabra_aleatoria.length; i++){
-            if (palabra_aleatoria[i]== keyValue){                
-                lista_h1[i].innerHTML = palabra_aleatoria[i];
+    if(es_una_letra(keyValue)){        
+        if (palabra_aleatoria.includes(keyValue) && !lista_letras_usadas.includes(keyValue)){
+            lista_letras_usadas.push(keyValue);        
+            contador_ganar ++;
+            console.log("Puntos para ganar: "+ cuantas_letras_tiene(palabra_aleatoria)+ " Puntos actuales: " + contador_ganar);
+            for (i = 0; i<palabra_aleatoria.length; i++){
+                if (palabra_aleatoria[i]== keyValue){                
+                    lista_h1[i].innerHTML = palabra_aleatoria[i];
+                }
             }
+            if(contador_ganar==cuantas_letras_tiene(palabra_aleatoria)){
+                cartel.innerHTML = "GANASTE";
+            }
+            
         }
-        if(contador_ganar==cuantas_letras_tiene(palabra_aleatoria)){
-            cartel.innerHTML = "GANASTE";
-        }
-        
-    }
-    else{
-        if (!lista_letras_usadas.includes(keyValue)){
-            lista_letras_usadas.push(keyValue);
-            letras_falladas += keyValue + " ";
-            div_letras_erradas.innerHTML =letras_falladas; 
-            contador_perder++;
-            imgagen_ahorcandose.src = "imagenes/Ahorcado_"+ contador_perder +".png";
-            if(contador_perder == 7){
-                terminar_evento();
-                cartel.innerHTML = "GAME OVER";
-            }        
+        else{
+            if (!lista_letras_usadas.includes(keyValue)){
+                lista_letras_usadas.push(keyValue);
+                letras_falladas += keyValue + " ";
+                div_letras_erradas.innerHTML =letras_falladas; 
+                contador_perder++;
+                imgagen_ahorcandose.src = "imagenes/Ahorcado_"+ contador_perder +".png";
+                if(contador_perder == 7){
+                    terminar_evento();
+                    cartel.innerHTML = "GAME OVER";
+                }        
+            }
         }
     }
 }
