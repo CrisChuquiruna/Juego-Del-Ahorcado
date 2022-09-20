@@ -1,6 +1,7 @@
 body{
     min-height: 100%;
     background-color: rgb(35, 126, 73);
+    padding-bottom: 3em;
 }
 
 header{
@@ -58,7 +59,10 @@ header{
 }
 
 #textarea{
-    margin-left: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    
     height: 10em;
     border: none;
     background-color: rgb(35, 126, 73);
@@ -177,4 +181,16 @@ header{
 #seccion_botones_interfaz button:active{background-color: rgb(136, 55, 41);}
 #seccion_botones_interfaz button:last-child{
     margin-right: 5px;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    font-size: 1rem;
+    font-family: "Times New Roman", Times, serif;
+    transition: 0.5s;
+    background-color: transparent;
+    padding: 1em 0;
+    width: 100%;
 }
