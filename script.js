@@ -1,5 +1,5 @@
 
-var palabras = ["MANZANA", "FRUTILLA", "ALURA", "HTML", "ARGENTINA"];
+var palabras = ["MANZANA", "FRUTILLA", "RECITAL", "MARIHUANA", "ARGENTINA", "COCINA", "MUSICA", "EDIFICIO", "COTORRA", "FOCA", "PAJARO", "LAGARTO", "HONGOS"];
 
 const boton_iniciar = document.getElementById("start");
 const menu = document.getElementById("menu");
